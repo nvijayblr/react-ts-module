@@ -1,23 +1,3 @@
-import { RouteObject } from 'react-router-dom';
-
-import App from './App';
-import ProtectedRoutesWrapper from './core/router/ProtectedRoutesWrapper';
-import ErrorPage from './modules/static/pages/ErrorPage/ErrorPage';
-import { staticRoutes } from './modules/static/router';
-import adminRouter from './pages/admin/router';
-import adrRouter from './pages/adr/router';
-import alertsRouter from './pages/alerts/router';
-import billingRouter from './pages/billing/router';
-import devicesRouter from './pages/devices/router';
-import downloadRouter from './pages/download/router';
-import integrationsRouter from './pages/integrations/router';
-import meterRouter from './pages/meter/router';
-import scheduleRouter from './pages/schedule/router';
-import systemsRouter from './pages/systems/router';
-import userSettingsRouter from './pages/user-settings/router';
-import utilityRouter from './pages/utility/router';
-import LayoutForSites from './shared/containers/LayoutWithHeaderAndFooter/LayoutWithHeaderAndFooter';
-import LayoutWithNavigation from './shared/containers/LayoutWithNavigation/LayoutWithNavigation';
 
 export const router: RouteObject[] = [
   {
