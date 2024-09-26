@@ -1,0 +1,106 @@
+import { Meta, Story } from '@storybook/react';
+
+
+import { TableColumn, TableColumnDocs } from '../TableHeader/TableHeader';
+import Table, { TableProps } from './Table';
+
+export default {
+  title: 'Shared/Table',
+  component: Table,
+  subcomponents: { TableColumn: TableColumnDocs },
+} as Meta;
+
+interface DataExample {
+  id: string;
+  displayValue: string;
+}
+
+const Template: Story<TableProps<DataExample>> = (args) => <Table {...args} />;
+
+export const Default = Template.bind({});
+
+Default.args = {
+  reserveSpaceForCheckbox: false,
+  columns: [
+    {
+      title: 'ID',
+      propertyName: 'id',
+      sortable: true,
+    },
+    {
+      title: 'Value',
+      propertyName: 'displayValue',
+    },
+  ] as TableColumn<DataExample>[],
+  data: [
+    { id: '01', displayValue: 'Value-01' },
+    { id: '02', displayValue: 'Value-02' },
+    { id: '03', displayValue: 'Value-03' },
+  ],
+};
+
+export const WithCustomCellRenderFunction = Template.bind({});
+
+WithCustomCellRenderFunction.args = {
+  reserveSpaceForCheckbox: false,
+  columns: [
+    {
+      title: 'ID',
+      propertyName: 'id',
+      sortable: true,
+    },
+    {
+      title: 'Value',
+      propertyName: 'displayValue',
+      render: (row: DataExample) => <b>{row.displayValue} is here</b>,
+    },
+    {
+      title: '',
+      propertyName: '',
+      render: (row: DataExample) => (
+        <div>
+          <button>customAction for {row.id}</button>
+        </div>
+      ),
+    },
+  ] as TableColumn<DataExample>[],
+  data: [
+    { id: '01', displayValue: 'Value-01' },
+    { id: '02', displayValue: 'Value-02' },
+    { id: '03', displayValue: 'Value-03' },
+  ],
+};
+
+export const WithCustomColumnWidth = Template.bind({});
+
+WithCustomColumnWidth.args = {
+  reserveSpaceForCheckbox: false,
+  columns: [
+    {
+      size: '0.3fr',
+      title: 'ID (0.3fr)',
+      propertyName: 'id',
+      sortable: true,
+    },
+    {
+      title: 'Value (fallback to 1fr)',
+      propertyName: 'displayValue',
+      render: (row: DataExample) => <b>{row.displayValue} is here</b>,
+    },
+    {
+      size: '100px',
+      title: '100px',
+      propertyName: '',
+      render: (row: DataExample) => (
+        <div>
+          <button>customAction for {row.id}</button>
+        </div>
+      ),
+    },
+  ] as TableColumn<DataExample>[],
+  data: [
+    { id: '01', displayValue: 'Value-01' },
+    { id: '02', displayValue: 'Value-02' },
+    { id: '03', displayValue: 'Value-03' },
+  ],
+};

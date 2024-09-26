@@ -1,0 +1,48 @@
+html,
+body {
+  scroll-behavior: smooth;
+  width: 100vw;
+  overflow-x: hidden !important;
+
+  // Scroll styling for Chrome-like browsers and Safari
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background-color: var(--elevation-24);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    cursor: pointer;
+    background-color: transparent;
+  }
+}
+
+// Scroll layout dirty fix for Firefox
+* {
+  scrollbar-color: var(--elevation-24) transparent;
+  scrollbar-width: thin;
+}
+
+button {
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+[role='button'] {
+  cursor: pointer;
+}
+
+:global(.disabled) {
+  [role='button'] {
+    pointer-events: none;
+  }
+}
+
+.w-100 {
+  width: 100% !important;
+}

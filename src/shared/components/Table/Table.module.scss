@@ -1,0 +1,54 @@
+@import 'src/styles/variables';
+
+.table-row {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+  padding: 8px 32px;
+
+  &.clickable-row {
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--elevation-12);
+    }
+  }
+
+  &.center {
+    justify-items: center;
+  }
+
+  .cell-wrap {
+    display: inherit;
+    width: 100%;
+
+    &.column-center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &.column-end {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+
+  .cell {
+    // TODO: do not use flex for rows, use features of parent grid
+    // grid will not work if we have table with inner table
+    display: flex;
+
+    // TODO: define alignment based on TableColumn config
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 36px;
+    padding: $spacing-8 $spacing-16;
+  }
+
+  &.disabled-row {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

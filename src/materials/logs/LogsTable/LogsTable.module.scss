@@ -1,0 +1,14 @@
+@import 'src/styles/variables';
+
+.logs-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-filters {
+  display: flex;
+
+  div:not(:first-child) {
+    margin-left: 16px;
+  }
+}

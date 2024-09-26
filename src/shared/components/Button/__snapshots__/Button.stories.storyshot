@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storybook Tests Button AlwaysPressed 1`] = `
+<div>
+  <button
+    class="card hov-el-20 body-semi-bold button pressed with-label flat"
+    type="button"
+  >
+    <span>
+       
+      Button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storybook Tests Button Disabled 1`] = `
+<div>
+  <button
+    class="card hov-el-20 body-semi-bold button with-label el-12 flat"
+    disabled=""
+    type="button"
+  >
+    <span>
+       
+      Button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storybook Tests Button Flat 1`] = `
+<div>
+  <button
+    class="card hov-el-20 body-semi-bold button with-label flat"
+    type="button"
+  >
+    <span>
+       
+      Button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storybook Tests Button Primary 1`] = `
+<div>
+  <button
+    class="card hov-el-20 body-semi-bold button with-label primary"
+    type="button"
+  >
+    <span>
+       
+      Button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storybook Tests Button RoundedShape 1`] = `
+<div>
+  <button
+    class="card hov-el-20 body-semi-bold button rounded with-icon el-12 flat"
+    type="button"
+  >
+    <span
+      class="icon icon-gen icon-ic-bell icon-col-primary s"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storybook Tests Button WithIcon 1`] = `
+<div>
+  <button
+    class="card hov-el-20 body-semi-bold button with-icon el-12 flat"
+    type="button"
+  >
+    <span
+      class="icon icon-gen icon-ic-bell icon-col-primary s"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storybook Tests Button WithLabel 1`] = `
+<div>
+  <button
+    class="card hov-el-20 body-semi-bold button with-label el-12 flat"
+    type="button"
+  >
+    <span>
+       
+      Button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storybook Tests Button WithLabelAndIcon 1`] = `
+<div>
+  <button
+    class="card hov-el-20 body-semi-bold button with-icon el-12 flat"
+    type="button"
+  >
+    <span
+      class="icon icon-gen icon-ic-bell icon-col-primary s"
+    />
+    <span>
+       
+      Button
+    </span>
+  </button>
+</div>
+`;

@@ -1,0 +1,19 @@
+@import 'src/styles/variables';
+
+.layout {
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: column;
+  padding-top: 0;
+  padding-left: 64px;
+  background: var(--elements-base);
+  transition: $animation-duration-slow padding-left;
+
+  &.fixed-and-expanded {
+    padding-left: 296px;
+  }
+
+  .content {
+    flex: 1 1 auto;
+  }
+}

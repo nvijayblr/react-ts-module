@@ -1,0 +1,21 @@
+@import 'src/styles/variables';
+
+.header-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-gap: 24px;
+  place-items: center center;
+  margin-bottom: 24px;
+}
+
+.select-wrapper {
+  width: 250px;
+}
+
+.tooltip-icon {
+  cursor: auto;
+
+  &.dimmed {
+    opacity: 0.5;
+  }
+}

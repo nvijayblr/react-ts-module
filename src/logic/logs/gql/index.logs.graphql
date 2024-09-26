@@ -1,0 +1,44 @@
+query GetResourceLogs(
+  $logsFilterInput: LogsFilterInput!
+  $resourceIds: [String!]!
+  $resourceType: AuditLogResourceType!
+) {
+  resourceAuditLogs(logsFilterInput: $logsFilterInput, resourceIds: $resourceIds, resourceType: $resourceType) {
+    data {
+      id
+      createdAt
+      initiator
+      initiator_id
+      type
+      actions
+      comment
+      comment_id
+      resourceId
+      organizationId
+      alertId
+    }
+    pagination {
+      currentPage
+      perPage
+      from
+      to
+      total
+      lastPage
+    }
+  }
+}
+
+mutation AddNoteLog($resourceId: String!, $resourceType: AuditLogResourceType!, $note: String!) {
+  addNoteLog(resourceId: $resourceId, resourceType: $resourceType, note: $note)
+}
+
+mutation AddComment($auditLogId: Int!, $commentId: Int, $comment: String!) {
+  addComment(auditLogId: $auditLogId, commentId: $commentId, comment: $comment) {
+    id
+    comment
+  }
+}
+
+query GetSystemUsersForFilter($resourceIds: [String!]!, $resourceType: AuditLogResourceType!) {
+  systemUsersForFilter(resourceIds: $resourceIds, resourceType: $resourceType)
+}

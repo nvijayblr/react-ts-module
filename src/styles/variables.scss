@@ -1,0 +1,32 @@
+$spacing-4: 4px;
+$spacing-8: 8px;
+$spacing-12: 12px;
+$spacing-14: 14px;
+$spacing-16: 16px;
+$spacing-20: 20px;
+$spacing-24: 24px;
+$spacing-28: 28px;
+$spacing-32: 32px;
+$spacing-40: 40px;
+$spacing-48: 48px;
+$spacing-52: 52px;
+$spacing-64: 64px;
+
+// animation
+$animation-duration-fast: 100ms;
+$animation-duration-medium: 200ms;
+$animation-duration-slow: 300ms;
+
+// default border
+$border-common: 1px solid var(--elevation-08);
+
+// arrays that are needed for generation combination of classes for ColorConfig
+$colors: 'blue', 'red', 'orange', 'dark-blue', 'green', 'white';
+$dash-variations: 'solid', 'dashed', 'dotted';
+$opacity-variations: 'opaque', 'translucent';
+
+@mixin tablet-or-mobile {
+  @media (width < 1024px) {
+    @content;
+  }
+}

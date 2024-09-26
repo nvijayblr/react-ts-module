@@ -1,0 +1,51 @@
+@import 'src/styles/variables';
+
+$footer-logo-height: 16px;
+
+.footer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+  padding-top: 64px;
+  padding-bottom: 20px;
+
+  @media (width >= 992px) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  @include tablet-or-mobile {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: auto;
+    height: $footer-logo-height;
+  }
+
+  .links {
+    @include tablet-or-mobile {
+      justify-content: center;
+    }
+
+    .separator {
+      @include tablet-or-mobile {
+        display: none;
+      }
+    }
+
+    .rights {
+      @include tablet-or-mobile {
+        flex: 1 0 100%;
+        width: 100%;
+      }
+    }
+
+    .text {
+      text-decoration: underline;
+    }
+  }
+}
