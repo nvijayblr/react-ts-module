@@ -1,22 +1,3 @@
-import { ONE_MINUTE_MS, ONE_SECOND_MS, UNIT } from './constants';
-import { AlertColor } from './core/apollo/__generated__/alertsGlobalTypes';
-import { GatewayVersion } from './core/apollo/__generated__/iotGlobalTypes';
-import {
-  FanType,
-  FloorType,
-  MetricsMeasurementType,
-  MetricType,
-  ModeType,
-  SensorDeviceType,
-  SitePrimaryPropertyType,
-  SpaceStatus,
-  SpaceType,
-  OnlineStatus,
-  SystemType,
-} from './core/apollo/__generated__/resourcesGlobalTypes';
-import { UserRoles } from './core/apollo/__generated__/usersGlobalTypes';
-import { OptionItem } from './shared/components/Select';
-
 export enum SupportedColors {
   Red = 'red',
   Orange = 'orange',
